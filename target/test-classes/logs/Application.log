@@ -1,0 +1,26 @@
+2025-03-15 19:09:11.975 [main] DEBUG amal2004.base.TestBase - Config file Loaded!!!
+2025-03-15 19:09:11.991 [main] DEBUG amal2004.base.TestBase - OR file Loaded!!!
+2025-03-15 19:09:13.238 [main] DEBUG amal2004.base.TestBase - Chrome Launched!!!
+2025-03-15 19:09:19.782 [main] DEBUG amal2004.base.TestBase - Navigated to :http://www.way2automation.com/angularjs-protractor/banking/#/login
+2025-03-15 19:09:22.858 [main] DEBUG amal2004.base.TestBase - Inside Login Test
+2025-03-15 19:09:25.060 [main] DEBUG amal2004.base.TestBase - Login executed!!!
+2025-03-15 19:09:42.386 [main] DEBUG amal2004.base.TestBase - Test execution completed!!!
+2025-03-15 21:09:39.593 [main] DEBUG amal2004.base.TestBase - Config file Loaded!!!
+2025-03-15 21:09:39.599 [main] DEBUG amal2004.base.TestBase - OR file Loaded!!!
+2025-03-15 21:09:41.040 [main] DEBUG amal2004.base.TestBase - Chrome Launched!!!
+2025-03-15 21:09:42.664 [main] DEBUG amal2004.base.TestBase - Navigated to :http://www.way2automation.com/angularjs-protractor/banking/#/login
+2025-03-15 21:09:45.746 [main] DEBUG amal2004.base.TestBase - Inside Login Test
+2025-03-15 21:26:42.410 [main] DEBUG amal2004.base.TestBase - Config file Loaded!!!
+2025-03-15 21:26:42.415 [main] DEBUG amal2004.base.TestBase - OR file Loaded!!!
+2025-03-15 21:26:43.504 [main] DEBUG amal2004.base.TestBase - Chrome Launched!!!
+2025-03-15 21:26:45.210 [main] DEBUG amal2004.base.TestBase - Navigated to :http://www.way2automation.com/angularjs-protractor/banking/#/login
+2025-03-15 21:26:48.291 [main] DEBUG amal2004.base.TestBase - Inside Login Test
+2025-03-15 21:26:50.378 [main] DEBUG amal2004.base.TestBase - Login executed!!!
+2025-03-15 21:27:10.921 [main] DEBUG amal2004.base.TestBase - Test execution completed!!!
+2025-03-15 21:27:36.616 [main] DEBUG amal2004.base.TestBase - Config file Loaded!!!
+2025-03-15 21:27:36.622 [main] DEBUG amal2004.base.TestBase - OR file Loaded!!!
+2025-03-15 21:27:37.799 [main] DEBUG amal2004.base.TestBase - Chrome Launched!!!
+2025-03-15 21:27:40.788 [main] DEBUG amal2004.base.TestBase - Navigated to :http://www.way2automation.com/angularjs-protractor/banking/#/login
+2025-03-15 21:27:43.881 [main] DEBUG amal2004.base.TestBase - Inside Login Test
+2025-03-15 21:27:45.984 [main] DEBUG amal2004.base.TestBase - Login executed!!!
+2025-03-15 21:28:05.206 [main] DEBUG amal2004.base.TestBase - Test execution completed!!!

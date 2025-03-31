@@ -1,0 +1,12 @@
+amal2004\utilities\ExcelReader.class
+amal2004\utilities\TestConfig.class
+amal2004\base\TestBase.class
+amal2004\utilities\MonitoringMail.class
+amal2004\testcases\BankManagerLoginTest.class
+amal2004\listeners\CustomListeners.class
+amal2004\utilities\TestUtil.class
+amal2004\testcases\AddCustomerTest.class
+amal2004\rough\TestProperties.class
+amal2004\utilities\ExtentManager.class
+amal2004\utilities\MonitoringMail$SMTPAuthenticator.class
+amal2004\testcases\OpenAccountTest.class

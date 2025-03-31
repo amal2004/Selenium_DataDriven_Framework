@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Add Customer Login Test"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="1"
+           time="13.833">
+  <properties />
+  
+            <testcase name="addCustomerTest" time="0.0" classname="amal2004.testcases.AddCustomerTest">
+          <skipped />
+    </testcase>
+  
+            <testcase name="addCustomerTest" time="4.302" classname="amal2004.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="5.244" classname="amal2004.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="4.284" classname="amal2004.testcases.AddCustomerTest" />
+      
+</testsuite>
