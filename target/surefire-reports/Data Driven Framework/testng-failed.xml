@@ -6,15 +6,37 @@
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     <listener class-name="amal2004.listeners.CustomListeners"/>
   </listeners>
+  <test thread-count="5" name="Bank Manager Login Test(failed)" verbose="0">
+    <classes>
+      <class name="amal2004.testcases.BankManagerLoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="bankManagerLoginTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- amal2004.testcases.BankManagerLoginTest -->
+    </classes>
+  </test> <!-- Bank Manager Login Test(failed) -->
   <test thread-count="5" name="Add Customer Login Test(failed)" verbose="0">
     <classes>
       <class name="amal2004.testcases.AddCustomerTest">
         <methods>
           <include name="tearDown"/>
-          <include name="addCustomerTest" invocation-numbers="1"/>
+          <include name="addCustomerTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- amal2004.testcases.AddCustomerTest -->
     </classes>
   </test> <!-- Add Customer Login Test(failed) -->
+  <test thread-count="5" name="Open Account Test(failed)" verbose="0">
+    <classes>
+      <class name="amal2004.testcases.OpenAccountTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="openAccountTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- amal2004.testcases.OpenAccountTest -->
+    </classes>
+  </test> <!-- Open Account Test(failed) -->
 </suite> <!-- Failed suite [Data Driven Framework] -->

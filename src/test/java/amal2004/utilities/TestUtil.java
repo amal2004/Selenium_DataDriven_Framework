@@ -9,6 +9,7 @@ import java.util.Hashtable;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 
 import amal2004.base.TestBase;
@@ -18,16 +19,34 @@ public class TestUtil extends TestBase {
 	public static String screenshotPath;
 	public static String screenshotName;
 
-	public static void captureScreenshot() throws IOException {
-
-		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-		Date d = new Date();
-		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-
-		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir") + "\\reports\\"+screenshotName));
-				
-
+//	public static void captureScreenshot() throws IOException {
+//
+//
+//		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//
+//		Date d = new Date();
+//		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
+//
+//		//FileUtils.copyFile(scrFile,new File(System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName));
+//		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir") + "\\reports\\"+screenshotName));
+//		
+//	}
+	
+	public static String captureScreenshot(WebDriver driver) {
+		TakesScreenshot scrnShot = (TakesScreenshot)driver;
+		
+		File src = scrnShot.getScreenshotAs(OutputType.FILE);
+		String path = System.getProperty("user.dir") + "/screenshots/"+ System.currentTimeMillis()+".png";
+		File destination = new File(path);
+		
+		try {
+			FileUtils.copyFile(src, destination);
+			return path;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
 	}
 	
 	

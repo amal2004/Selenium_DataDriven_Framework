@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Open Account Test"
-           tests="1"
-           failures="0"
+           tests="3"
+           failures="1"
            errors="0"
-           skipped="0"
-           time="3.578">
+           skipped="2"
+           time="3.892">
   <properties />
+            <testcase name="setUp" time="3.892" classname="amal2004.testcases.OpenAccountTest">
+                <failure type="org.openqa.selenium.SessionNotCreatedException"
+                  message="Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 135.0.7049.96 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: &apos;AMALS_HP_ENVY&apos;, ip: &apos;192.168.1.7&apos;
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]}]"
+              >
+<![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 135.0.7049.96 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'AMALS_HP_ENVY', ip: '192.168.1.7'
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]}]
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:174)
+  org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:110)
+  org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+  org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+  org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+  amal2004.base.TestBase.setUp(TestBase.java:84)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:568)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+  org.testng.SuiteRunner.run(SuiteRunner.java:312)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+  org.testng.TestNG.runSuites(TestNG.java:1112)
+  org.testng.TestNG.run(TestNG.java:1079)
+  org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+  org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+  org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+  org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+  org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+  org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+  org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="tearDown" time="0.0" classname="amal2004.testcases.OpenAccountTest">
+          <skipped />
+    </testcase>
+            <testcase name="openAccountTest" time="0.0" classname="amal2004.testcases.OpenAccountTest">
+          <skipped />
+    </testcase>
   
   
-            <testcase name="openAccountTest" time="3.578" classname="amal2004.testcases.OpenAccountTest" />
-      
 </testsuite>

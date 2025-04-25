@@ -5,23 +5,53 @@
       <![CDATA[Login Successfully Executed!]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-29T17:40:14 EDT" name="Data Driven Framework" finished-at="2025-03-29T17:40:36 EDT" duration-ms="22442">
+  <suite started-at="2025-04-21T22:17:51 EDT" name="Data Driven Framework" finished-at="2025-04-21T22:18:15 EDT" duration-ms="24787">
     <groups>
     </groups>
-    <test started-at="2025-03-29T17:40:14 EDT" name="Bank Manager Login Test" finished-at="2025-03-29T17:40:19 EDT" duration-ms="5185">
+    <test started-at="2025-04-21T22:17:51 EDT" name="Bank Manager Login Test" finished-at="2025-04-21T22:17:56 EDT" duration-ms="5921">
       <class name="amal2004.testcases.BankManagerLoginTest">
-        <test-method signature="bankManagerLoginTest()[pri:0, instance:amal2004.testcases.BankManagerLoginTest@6b9c69a9]" started-at="2025-03-29T17:40:14 EDT" name="bankManagerLoginTest" finished-at="2025-03-29T17:40:19 EDT" duration-ms="5133" status="PASS">
+        <test-method is-config="true" signature="launch()[pri:0, instance:amal2004.testcases.BankManagerLoginTest@5922ae77]" started-at="2025-04-21T22:17:51 EDT" name="launch" finished-at="2025-04-21T22:17:51 EDT" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:amal2004.testcases.BankManagerLoginTest@5922ae77]" started-at="2025-04-21T22:17:51 EDT" name="setup" finished-at="2025-04-21T22:17:51 EDT" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void amal2004.testcases.BankManagerLoginTest.bankManagerLoginTest() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="bankManagerLoginTest()[pri:0, instance:amal2004.testcases.BankManagerLoginTest@5922ae77]" started-at="2025-04-21T22:17:51 EDT" name="bankManagerLoginTest" finished-at="2025-04-21T22:17:56 EDT" duration-ms="5176" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Login Successfully Executed!]]>
             </line>
           </reporter-output>
         </test-method> <!-- bankManagerLoginTest -->
+        <test-method is-config="true" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:amal2004.testcases.BankManagerLoginTest@5922ae77]" started-at="2025-04-21T22:17:56 EDT" name="checkStatus" finished-at="2025-04-21T22:17:56 EDT" duration-ms="433" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bankManagerLoginTest status=SUCCESS method=BankManagerLoginTest.bankManagerLoginTest()[pri:0, instance:amal2004.testcases.BankManagerLoginTest@5922ae77] output=Login Successfully Executed!]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
       </class> <!-- amal2004.testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test started-at="2025-03-29T17:40:20 EDT" name="Add Customer Login Test" finished-at="2025-03-29T17:40:33 EDT" duration-ms="13880">
+    <test started-at="2025-04-21T22:17:57 EDT" name="Add Customer Login Test" finished-at="2025-04-21T22:18:12 EDT" duration-ms="14982">
       <class name="amal2004.testcases.AddCustomerTest">
-        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@58f174d9]" started-at="2025-03-29T17:40:20 EDT" name="addCustomerTest" data-provider="dp" finished-at="2025-03-29T17:40:25 EDT" duration-ms="5244" status="PASS">
+        <test-method is-config="true" signature="launch()[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:17:57 EDT" name="launch" finished-at="2025-04-21T22:17:57 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:17:57 EDT" name="addCustomerTest" data-provider="dp" finished-at="2025-04-21T22:18:02 EDT" duration-ms="5198" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,7 +62,40 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@58f174d9]" started-at="2025-03-29T17:40:25 EDT" name="addCustomerTest" data-provider="dp" finished-at="2025-03-29T17:40:25 EDT" duration-ms="3" status="SKIP">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:17:57 EDT" name="setup" finished-at="2025-04-21T22:17:57 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void amal2004.testcases.AddCustomerTest.addCustomerTest(java.util.Hashtable) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:02 EDT" name="checkStatus" finished-at="2025-04-21T22:18:02 EDT" duration-ms="148" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCustomerTest status=SUCCESS method=AddCustomerTest.addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:02 EDT" name="setup" finished-at="2025-04-21T22:18:02 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void amal2004.testcases.AddCustomerTest.addCustomerTest(java.util.Hashtable) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:02 EDT" name="addCustomerTest" data-provider="dp" finished-at="2025-04-21T22:18:02 EDT" duration-ms="1" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -46,7 +109,7 @@
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipping the test case as the Run mode for data set is NO
-at amal2004.testcases.AddCustomerTest.addCustomerTest(AddCustomerTest.java:21)
+at amal2004.testcases.AddCustomerTest.addCustomerTest(AddCustomerTest.java:34)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,7 +144,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@58f174d9]" started-at="2025-03-29T17:40:25 EDT" name="addCustomerTest" data-provider="dp" finished-at="2025-03-29T17:40:29 EDT" duration-ms="4302" status="PASS">
+        <test-method is-config="true" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:02 EDT" name="checkStatus" finished-at="2025-04-21T22:18:02 EDT" duration-ms="159" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCustomerTest status=SKIP method=AddCustomerTest.addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
+        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:02 EDT" name="addCustomerTest" data-provider="dp" finished-at="2025-04-21T22:18:07 EDT" duration-ms="4770" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -92,7 +166,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@58f174d9]" started-at="2025-03-29T17:40:29 EDT" name="addCustomerTest" data-provider="dp" finished-at="2025-03-29T17:40:33 EDT" duration-ms="4284" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:02 EDT" name="setup" finished-at="2025-04-21T22:18:02 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void amal2004.testcases.AddCustomerTest.addCustomerTest(java.util.Hashtable) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:07 EDT" name="checkStatus" finished-at="2025-04-21T22:18:07 EDT" duration-ms="106" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCustomerTest status=SUCCESS method=AddCustomerTest.addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
+        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:07 EDT" name="addCustomerTest" data-provider="dp" finished-at="2025-04-21T22:18:11 EDT" duration-ms="4468" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -103,15 +199,41 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:07 EDT" name="setup" finished-at="2025-04-21T22:18:07 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void amal2004.testcases.AddCustomerTest.addCustomerTest(java.util.Hashtable) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8]" started-at="2025-04-21T22:18:11 EDT" name="checkStatus" finished-at="2025-04-21T22:18:12 EDT" duration-ms="84" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCustomerTest status=SUCCESS method=AddCustomerTest.addCustomerTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.AddCustomerTest@37fbe4a8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
       </class> <!-- amal2004.testcases.AddCustomerTest -->
     </test> <!-- Add Customer Login Test -->
-    <test started-at="2025-03-29T17:40:33 EDT" name="Open Account Test" finished-at="2025-03-29T17:40:36 EDT" duration-ms="2843">
+    <test started-at="2025-04-21T22:18:12 EDT" name="Open Account Test" finished-at="2025-04-21T22:18:15 EDT" duration-ms="3662">
       <class name="amal2004.testcases.OpenAccountTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:amal2004.testcases.OpenAccountTest@4d6f623d]" started-at="2025-03-29T17:40:05 EDT" name="setUp" finished-at="2025-03-29T17:40:14 EDT" duration-ms="8584" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:amal2004.testcases.OpenAccountTest@5dda6f9]" started-at="2025-04-21T22:17:46 EDT" name="setUp" finished-at="2025-04-21T22:17:51 EDT" duration-ms="4882" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="openAccountTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.OpenAccountTest@4d6f623d]" started-at="2025-03-29T17:40:33 EDT" name="openAccountTest" data-provider="dp" finished-at="2025-03-29T17:40:36 EDT" duration-ms="2836" status="PASS">
+        <test-method is-config="true" signature="launch()[pri:0, instance:amal2004.testcases.OpenAccountTest@5dda6f9]" started-at="2025-04-21T22:18:12 EDT" name="launch" finished-at="2025-04-21T22:18:12 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="openAccountTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.OpenAccountTest@5dda6f9]" started-at="2025-04-21T22:18:12 EDT" name="openAccountTest" data-provider="dp" finished-at="2025-04-21T22:18:15 EDT" duration-ms="3301" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -122,7 +244,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openAccountTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:amal2004.testcases.OpenAccountTest@4d6f623d]" started-at="2025-03-29T17:40:36 EDT" name="tearDown" finished-at="2025-03-29T17:40:37 EDT" duration-ms="982" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:amal2004.testcases.OpenAccountTest@5dda6f9]" started-at="2025-04-21T22:18:12 EDT" name="setup" finished-at="2025-04-21T22:18:12 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void amal2004.testcases.OpenAccountTest.openAccountTest(java.util.Hashtable) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="checkStatus(org.testng.ITestResult)[pri:0, instance:amal2004.testcases.OpenAccountTest@5dda6f9]" started-at="2025-04-21T22:18:15 EDT" name="checkStatus" finished-at="2025-04-21T22:18:15 EDT" duration-ms="351" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openAccountTest status=SUCCESS method=OpenAccountTest.openAccountTest(java.util.Hashtable)[pri:0, instance:amal2004.testcases.OpenAccountTest@5dda6f9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatus -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:amal2004.testcases.OpenAccountTest@5dda6f9]" started-at="2025-04-21T22:18:15 EDT" name="tearDown" finished-at="2025-04-21T22:18:17 EDT" duration-ms="1217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

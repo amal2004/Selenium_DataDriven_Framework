@@ -1,8 +1,13 @@
 package amal2004.base;
 
+import static amal2004.base.TestBase.extent;
+import static amal2004.base.TestBase.logger;
+import static amal2004.base.TestBase.report;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.Properties;
@@ -17,11 +22,19 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import amal2004.listeners.CustomListeners;
 import amal2004.utilities.ExcelReader;
@@ -30,7 +43,7 @@ import amal2004.utilities.TestUtil;
 public class TestBase {
 
 	public static WebDriver driver;
-	public static Properties config = new Properties();
+	public static Properties configProp = new Properties();
 	public static Properties or = new Properties();
 	public static FileInputStream fis;
 	public static Logger log = LogManager.getLogger();
@@ -38,6 +51,34 @@ public class TestBase {
 	public static WebDriverWait wait;
 	static WebElement dropdown;
 	public static String browser;
+	
+	public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
+	public static ExtentHtmlReporter report=new ExtentHtmlReporter("./Report/Report.html");
+	public static ExtentReports extent=new ExtentReports();
+	public static ExtentTest logger;
+
+	@BeforeClass
+	public static void launch(){    	
+		 extent.attachReporter(report);
+	}
+	
+	@BeforeMethod
+	public void setup(Method method) {
+    	logger=extent.createTest(method.getName());
+	}
+	
+	@AfterMethod
+	public void checkStatus(ITestResult result) {
+		try {
+			if(result.getStatus()== ITestResult.FAILURE) {
+				String path = TestUtil.captureScreenshot(driver);
+				logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		extent.flush();
+	}
 
 	@BeforeSuite
 	public void setUp() throws InterruptedException {
@@ -47,14 +88,12 @@ public class TestBase {
 				fis = new FileInputStream(
 						System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\Config.properties");
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			try {
-				config.load(fis);
+				configProp.load(fis);
 				log.debug("Config file Loaded!!!");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -62,56 +101,45 @@ public class TestBase {
 				fis = new FileInputStream(
 						System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\OR.properties");
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			try {
 				or.load(fis);
 				log.debug("OR file Loaded!!!");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
 			
 			if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
-
 				browser = System.getenv("browser");
 			} else {
-
-				browser = config.getProperty("browser");
+				browser = configProp.getProperty("browser");
 			}
-
-			config.setProperty("browser", browser);
-
-			System.out.println(config.getProperty("browser"));
+			configProp.setProperty("browser", browser);
+			System.out.println(configProp.getProperty("browser"));
 			
 			
-			if (config.getProperty("browser").equals("chrome")) {
-				System.setProperty("webdriver.chrome.driver",
-						System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
+			if (configProp.getProperty("browser").equals("chrome")) {
 				driver = new ChromeDriver();
 				log.debug("Chrome Launched!!!");
 				
-			} else if (config.getProperty("browser").equals("edge")) {
-				System.setProperty("webdriver.edge.driver",
-						System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\edge.exe");
+			} else if (configProp.getProperty("browser").equals("edge")) {
 				driver = new FirefoxDriver();
 			}
 
-		} else if (config.getProperty("browser").equals("ie")) {
-			System.setProperty("webdriver.ie.driver",
-					System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\IEDriverServer.exe");
+		} else if (configProp.getProperty("browser").equals("ie")) {
 			driver = new InternetExplorerDriver();
 		}
 		
-		driver.get(config.getProperty("testsiteurl"));
-		log.debug("Navigated to :" + config.getProperty("testsiteurl"));
+		driver.get(configProp.getProperty("testsiteurl"));
+		log.debug("Navigated to :" + configProp.getProperty("testsiteurl"));
+		
 		driver.manage().window().maximize();
-		driver.manage().timeouts()
-				.implicitlyWait(Duration.ofSeconds(Integer.parseInt(config.getProperty("implicit.wait"))));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(configProp.getProperty("implicit.wait"))));
 		
 		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		
 
 	}
 
@@ -163,12 +191,10 @@ public class TestBase {
 	public static void verifyEquals(String expected, String actual) throws IOException {
 
 		try {
-
 			Assert.assertEquals(actual, expected);
-
 		} catch (Throwable t) {
 
-			TestUtil.captureScreenshot();
+			TestUtil.captureScreenshot(driver);
 			// ReportNG
 			Reporter.log("<br>" + "Verification failure : " + t.getMessage() + "<br>");
 			Reporter.log("<a target=\"_blank\" href=" + TestUtil.screenshotName + "><img src=" + TestUtil.screenshotName

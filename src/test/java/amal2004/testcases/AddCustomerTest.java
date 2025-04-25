@@ -1,18 +1,31 @@
 package amal2004.testcases;
 
+import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.Hashtable;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import amal2004.base.TestBase;
 import amal2004.utilities.TestUtil;
 
 public class AddCustomerTest extends TestBase {
+	
 
+	
 	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
 	public void addCustomerTest(Hashtable<String,String> data) throws InterruptedException{
 		
@@ -34,6 +47,8 @@ public class AddCustomerTest extends TestBase {
 		alert.accept();
 		
 		Thread.sleep(2000);
+		
+	//	extent.flush();	
 		
 	}
 }

@@ -10,8 +10,11 @@
     <classes>
       <class name="amal2004.testcases.AddCustomerTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="launch"/>
+          <include name="checkStatus"/>
           <include name="addCustomerTest" invocation-numbers="1"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- amal2004.testcases.AddCustomerTest -->
